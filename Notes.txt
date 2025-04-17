@@ -1,0 +1,19 @@
+1-Task finalise
+2-js file for that task inside a folder
+	2.1-import libs as per task
+	2.2-function/s
+
+props: properties/ dynamic values from end implementation 
+
+state: dynamically changeable value
+
+const [text,settext] = useState('')
+
+const [initial_Value,event] = default value
+
+onClick->click karne par
+setText->update initial value
+
+
+
+const [source,setSource]
