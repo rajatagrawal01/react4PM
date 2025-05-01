@@ -12,8 +12,8 @@ function Bulb() {
     return(
         <div>
             <img src={source} alt="Bulb" width="200px" height="200px"/>
-            <button onClick={handleOnClick}>On</button>
-            <button onClick={handleOffClick}>Off</button>
+            <button className="btn btn-primary" onClick={handleOnClick}>On</button>
+            <button className="btn btn-danger" onClick={handleOffClick}>Off</button>
         </div>
     )
 
