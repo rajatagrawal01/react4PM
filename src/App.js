@@ -1,12 +1,14 @@
 import './App.css';
 import './apniCSS.css';
 // import {Headings,Paragraph} from './components/headings';
-// import Shyam from './components/counter'; 
+import Counter from './components/counter'; 
 // import Bulb from './components/bulb';
 // import Input from './components/input';
-import ArrayObj from './components/array-obj';
+// import ArrayObj from './components/array-obj';
+import { useState } from 'react';
 
 function App() {
+  const [visibility, setVisibility] = useState(true);
   return (
     <>
       {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -47,7 +49,13 @@ function App() {
         <button type="button" className="btn">Base class</button>
       </nav> */}
       {/* <Bulb/> */}
-      <ArrayObj/>
+      {/* <ArrayObj/> */}
+      
+      {/* <button onClick={() => setVisibility(!visibility)}>
+        {visibility ? <Counter/> : ""} Toggle Counter visibility
+      </button> */}
+      
+      <Counter/>
     </>
   );
 }
