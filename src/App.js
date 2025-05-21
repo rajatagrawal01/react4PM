@@ -6,6 +6,7 @@ import Counter from './components/counter';
 // import Input from './components/input';
 // import ArrayObj from './components/array-obj';
 import { useState } from 'react';
+import UserList from './components/apiCall';
 
 function App() {
   const [visibility, setVisibility] = useState(true);
@@ -55,7 +56,9 @@ function App() {
         {visibility ? <Counter/> : ""} Toggle Counter visibility
       </button> */}
       
-      <Counter/>
+      {/* <Counter/> */}
+
+      <UserList/>
     </>
   );
 }
