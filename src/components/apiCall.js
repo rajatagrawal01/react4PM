@@ -3,15 +3,22 @@ import React, { useEffect, useState } from "react";
 function UserList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const demoAPI="https://jsonplaceholder.typicode.com/users";
+
+  const fetchAPI= async () => {
+    try {
+      const res = await fetch(demoAPI);
+      const data = await res.json();
+      setUsers(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
+  };
+
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-        setLoading(false);
-      })
-      .catch((err) => console.log(err));
+    fetchAPI();
   }, []);
 
   if (loading)
